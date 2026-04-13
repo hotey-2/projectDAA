@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoubleBeat | Premium Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="main-audio" src=""></audio>
+
+    <div id="splash">
+        <div class="splash-logo">
+            <span style="animation-delay:0s">D</span>
+            <span style="animation-delay:.07s">o</span>
+            <span style="animation-delay:.14s">u</span>
+            <span style="animation-delay:.21s">b</span>
+            <span style="animation-delay:.28s">l</span>
+            <span style="animation-delay:.35s">e</span>
+            <span style="color:#f0f0f0;animation-delay:.45s">B</span>
+            <span style="color:#f0f0f0;animation-delay:.52s">e</span>
+            <span style="color:#f0f0f0;animation-delay:.59s">a</span>
+            <span style="color:#f0f0f0;animation-delay:.66s">t</span>
+        </div>
+        <div class="splash-tagline">Made by MR Dapinder - Bharat - Gurpreet</div>
+        <div class="splash-bar"><div class="splash-bar-fill"></div></div>
+    </div>
+
+    <div id="app">
+        <div class="top-area">
+            <nav class="sidebar">
+                <div class="sidebar-logo">DB</div>
+                <div class="nav-btn active">🏠</div>
+                <div class="nav-btn">🔍</div>
+                <div class="nav-btn">📚</div>
+                <div class="nav-btn" id="liked-nav">♥</div>
+            </nav>
+
+            <main class="content">
+                <div class="top-row">
+                    <h1 class="greeting" id="greeting">Welcome</h1>
+                    <div class="quote-wrap">
+                        <p id="quote-display"></p><span id="quote-cursor"></span>
+                    </div>
+                </div>
+
+                <div class="shelf-section">
+                    <div class="shelf-label">Trending Now</div>
+                    <div class="card-row" id="card-row"></div>
+                </div>
+
+                <div class="shelf-section">
+                    <div class="shelf-label">Up Next</div>
+                    <div id="list-view"></div>
+                </div>
+            </main>
+
+            <aside class="right-panel">
+                <div class="now-playing-panel">
+                    <div class="panel-art-wrap" id="art-wrap">
+                        <img class="panel-art" id="panel-art" src="" alt="Album art">
+                    </div>
+                    <div>
+                        <div class="panel-title" id="panel-title">—</div>
+                        <div class="panel-artist" id="panel-artist">—</div>
+                    </div>
+                    <div class="panel-controls">
+                        <button class="ctrl-btn" id="panel-prev">⏮</button>
+                        <button id="panel-play">▶</button>
+                        <button class="ctrl-btn" id="panel-next">⏭</button>
+                    </div>
+                    <div class="panel-seeker">
+                        <div class="seeker-track" id="panel-seeker">
+                            <div class="seeker-fill" id="panel-fill"></div>
+                            <div class="seeker-knob" id="panel-knob"></div>
+                        </div>
+                        <div class="seeker-times">
+                            <span id="cur-time">0:00</span>
+                            <span id="tot-time">0:00</span>
+                        </div>
+                    </div>
+                    <div class="panel-volume">
+                        <span>🔈</span>
+                        <input type="range" class="vol-slider" id="vol-slider" min="0" max="100" value="80">
+                        <span>🔊</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="player-bar">
+            <div class="bar-meta">
+                <img class="bar-art" id="bar-art" src="" alt="">
+                <div>
+                    <div class="bar-title" id="bar-title">—</div>
+                    <div class="bar-artist" id="bar-artist">—</div>
+                </div>
+                <button class="bar-heart" id="heart-btn">♡</button>
+            </div>
+
+            <div class="bar-center">
+                <div class="bar-btns">
+                    <button class="bar-btn" id="shuffle-btn">⇄</button>
+                    <button class="bar-btn" id="bar-prev">⏮</button>
+                    <button id="bar-play">▶</button>
+                    <button class="bar-btn" id="bar-next">⏭</button>
+                    <button class="bar-btn" id="repeat-btn">↻</button>
+                </div>
+                <div class="bar-seeker">
+                    <span id="bar-cur">0:00</span>
+                    <div class="bar-track" id="bar-track">
+                        <div class="bar-fill" id="bar-fill"></div>
+                        <div class="bar-knob" id="bar-knob"></div>
+                    </div>
+                    <span id="bar-tot">0:00</span>
+                </div>
+            </div>
+
+            <div class="bar-right">
+                <span>🔊</span>
+                <input type="range" class="bar-vol" id="bar-vol" min="0" max="100" value="80">
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
